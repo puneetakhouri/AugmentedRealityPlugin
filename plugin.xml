@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="com.ofss.fcdb.mobile.plugins.augmentedreality" version="1.0.0">
+	<name>AugmentedReality</name>
+	<description>Oracle Flexcube Direct Banking Augmented Reality Plugin</description>
+	<license>MIT</license>
+	<keywords>cordova, augmented reality</keywords>
+	<js-module src="www/augmentedreality.js" name="augmentedreality">
+		<clobbers target="augmentedreality" />
+	</js-module>
+	<engines>
+		<engine name="cordova" version=">=3.5.0" />
+	</engines>
+	<platform name="android">
+	
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="AugmentedReality">
+				<param name="android-package" value="com.ofss.fcdb.mobile.plugins.augmentedreality.AugmentedReality" />        
+			</feature>
+		</config-file>
+		<source-file src="src/android/AugmentedReality.java" target-dir="src/com/ofss/fcdb/mobile/plugins/augmentedreality" />
+	</platform>
+</plugin>
